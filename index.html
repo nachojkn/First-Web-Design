@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<!----- definición de html 5 -->
+<html lang="es">
+<!----- definición del lenguaje -->
+<!------Inicio del  HEAD -->
+
+<head>
+    <title>CryptoNews - Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!----- viewport para apple device-width = ancho pantalla initial-scale es que inicia sin ningún zoom -->
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <!----- icono para apple y safari -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/0 - Logo CriptoNews.png">
+    <!-- Load Require CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- iconos  -->
+    <link href="assets/css/boxicon.min.css" rel="stylesheet">
+    <!-- tipo de letra -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <!-- carga CSS -->
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<!-----
+.text-primary  		azul
+.text-secondary		gris
+.text-success		verde
+.text-danger		rojo
+.text-warning		amarillo
+.text-info			celeste
+.text-light			blanco
+.text-dark			negro
+.text-muted			gris oscuro
+.text-white			gris claro
+-->
+<!------------------------------------------------------------------ Fin del  HEAD -->
+
+<body>
+    <!-- Header 
+	nav = cuyo propósito es proporcionar enlaces de navegación, ya sea dentro del documento actual 
+	o a otros documentos
+	-->
+
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+
+        <!--navbar-expand-lg = envoltorio para que el navbar se estire en lg
+	navbar-light = texto negro de la letra
+	bg-white = fondo de color blanco
+	-->
+
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <a class="navbar-brand h1" href="index.html">
+                <!--navbar-brand = clase se utiliza para resaltar la marca o logotipo de su página-->
+                <img id="Logo" src="assets/img/0 - Logo CriptoNews.png" alt="Logo CryptoNews">
+                <!--	bx bx-buildings = icono del logo de la web: 
+				http://www.unisvg.com/icon-sets/bx/bx-buildings.html 
+				https://boxicons.com/
+				-->
+
+                <span class="text-white h4">CryptoNews</span>
+            </a>
+
+            <!--	boton de hamburguesa -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                </span>
+            </button>
+            <!------------------------------------------- Opciones del Menu		-->
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
+                id="navbar-toggler-success">
+
+                <!-------collapse navbar-collapse= para agrupar y ocultar el contenido de la barra de navegación 
+		por un punto de interrupción principal.
+		flex-fill = obliga a que todos los elementos tengan el mismo tamaño de ancho
+		d-lg-flex = utilidades para crear un contenedor flexbox y transforme los elementos secundarios 
+		directos en elementos flexibles
+		-->
+                <div class="flex-fill mx-xl-5 mb-2">
+                    <!--	  mx=para clases que establecen tanto *-lefty*-right-->
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-white">
+                        <!--   .navbar-nav para una navegación ligera y de altura completa 
+					   (incluida la compatibilidad con menús desplegables).-->
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-success rounded-pill px-3" href="index.html">Home</a>
+                            <!-- px = padding y mx es el margin 
+						rounded-pill =genera ese boton con bordes redondeados rounded-circle-->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-warning rounded-pill px-3" href="BTC.html">Bitcoin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3"
+                                href="construction.html">Ethereum</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-danger rounded-pill px-3"
+                                href="construction.html">Ingeniería</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-info rounded-pill px-3" href="construction.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!---------------------------------------------------------Fin de las opciones del menu
+------------------------------------------------------------ Inicio de los iconos del menu-->
+                <div class="navbar align-self-center d-flex">
+                    <a class="nav-link" target="_blank" href="https://www.coingecko.com/en"><i
+                            class="bx bx-line-chart bx-sm bx-tada-hover text-muted"></i></a>
+                    <a class="nav-link" href="#"><i class="bx bx-cog bx-sm bx-spin-hover text-muted"></i></a>
+                    <a class="nav-link" href="#"><i class="bx bx-user-circle bx-sm bx-tada-hover text-muted"></i></a>
+                    <!--	https://iconify.design/icon-sets/bx/-->
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!----------------------------------------------------------- Fin de los iconos del menu
+
+    <!-- Close Header -->
+    <!----------------------------------------------------------- Fin del Header-->
+
+    <!-- Start Banner Hero -->
+    <div class="banner-wrapper bg-dark">
+        <div id="index_banner" class="banner-vertical-center-index container-fluid pt-5">
+
+            <!-- Start slider -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+                </ol>
+                <!-- class="active" Se requiere un elemento activo inicial
+La .activeclase debe agregarse a una de las diapositivas. De lo contrario, el carrusel no será visible. -->
+
+                <div class="carousel-inner">
+
+                    <!-- Primer elemento del carrousel 
+Ver: https://getbootstrap.com/docs/4.0/components/carousel/  -->
+
+                    <div class="carousel-item active">
+
+                        <div class="py-5 row d-flex align-items-center">
+                            <div class="banner-content col-lg-8 col-8 offset-2 m-lg-auto text-left py-5 pb-5">
+                                <h1
+                                    class="banner-heading h1 text-p1 display-3 mb-0 pb-5 mx-0 px-0 semi-bold-600 typo-space-line">
+                                    <!--typo-space-line = clase configurada en el css 
+					display-3 = <H3> 
+					Where property is one of:
+
+						m - for classes that set margin
+						p - for classes that set padding
+						Where sides is one of:
+
+						t - for classes that set margin-top or padding-top
+						b - for classes that set margin-bottom or padding-bottom
+						l - for classes that set margin-left or padding-left
+						r - for classes that set margin-right or padding-right
+						x - for classes that set both *-left and *-right
+						y - for classes that set both *-top and *-bottom
+						blank - for classes that set a margin or padding on all 4 sides of the element
+						ejemplo: 
+						<div class="mx-auto" style="width: 200px;">
+						  Centered element
+						</div>
+					
+					-->
+                                    <strong>Muy buenas</strong> Cryptonautas
+                                </h1>
+                                <p class="banner-body h4 text-p1 py-3 mx-0 px-0">
+                                    Sean bienvenidos a CryptoNews <em>by Nacho.</em></p>
+                                <a class="banner-button btn rounded-pill btn-outline-danger btn-lg px-4"
+                                    href="https://www.youtube.com/channel/UC8Mo1ocX5jqNoORsxXdVBTA" role="button"
+                                    target="_blank">Youtube</a>
+                                <a class="banner-button btn rounded-pill btn-outline-secondary btn-lg px-4"
+                                    href="https://twitter.com/CryptoNewsArg" role="button" target="_blank">Twitter</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!----------------------------------------------------------- Nuevo ITem del Carrousel-->
+
+                    <div class="carousel-item">
+
+                        <div class="py-5 row d-flex align-items-center">
+                            <div class="banner-content col-lg-8 col-8 offset-2 m-lg-auto text-left py-5 pb-5">
+                                <h1
+                                    class="banner-heading h1 semi-bold-600 text-p1 display-3 mb-0 pb-3 mx-0 px-0 light-300">
+                                    Cryptómano de noche...
+                                </h1>
+                                <p class="banner-body h4 text-p1 py-3 h4">
+                                    Buscador de innovación, desarrollo DeFi y fanático de L2.
+                                </p>
+                                <a class="banner-button btn rounded-pill btn-outline-info btn-lg px-4"
+                                    href="construction.html" role="button">Ethereum</a>
+
+                                <a class="banner-button btn rounded-pill btn-outline-secondary btn-lg px-4"
+                                    href="https://polygon.technology/">Polygon</a>
+                                <!--role="button" indica que un boton no apunta a una url sino que hace otra cosa-->
+                            </div>
+                        </div>
+
+                    </div>
+                    <!----------------------------------------------------------- Nuevo ITem del Carrousel-->
+                    <div class="carousel-item">
+
+                        <div class="py-5 row d-flex align-items-center">
+                            <div class="banner-content col-lg-8 col-8 offset-2 m-lg-auto text-left py-5 pb-5">
+                                <h1
+                                    class="banner-heading h1 semi-bold-600 text-p1 display-3 mb-0 pb-3 mx-0 px-0 light-300">
+                                    Estudiante de ingeniería de día.
+                                </h1>
+                                <p class="banner-body h4 text-p1 py-3">
+                                    Curioso por todo, busco aprender de forma constante.
+                                </p>
+                                <a class="banner-button btn rounded-pill btn-outline-danger btn-lg px-4"
+                                    href="construction.html" role="button">Ingeniería</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-------------------------------------------------------Flechas del carrousel   -->
+                <a class="carousel-control-prev text-decoration-none" href="#carouselExampleIndicators" role="button"
+                    data-bs-slide="prev">
+                    <i class="bx bx-chevron-left"></i>
+                    <span class="visually-hidden">Ant.</span>
+                </a>
+                <a class="carousel-control-next text-decoration-none" href="#carouselExampleIndicators" role="button"
+                    data-bs-slide="next">
+                    <i class="bx bx-chevron-right"></i>
+                    <span class="visually-hidden">Prox.</span>
+                </a>
+            </div>
+            <!-- bx-chevron-right y left son las puntas de flecha del carrousel -->
+            <!-- End slider -->
+
+        </div>
+    </div>
+    <!-- End Banner Hero -->
+
+    <!-- Start Service -->
+    <section class="service-wrapper py-3">
+        <div class="container-fluid pb-3">
+            <div class="row">
+                <h2 class="h2 text-center col-12 py-5 semi-bold-600">Futuro</h2>
+                <div class="service-header col-2 col-lg-3 text-end light-300">
+                    <i class="bx bx-rocket h3 mt-1"></i>
+                </div>
+                <div class="service-heading col-10 col-lg-9 text-start float-end light-300">
+                    <h2 class="h3 pb-4 typo-space-line">En el universo de las blockchain</h2>
+                </div>
+            </div>
+            <p class="service-footer col-10 offset-2 col-lg-9 offset-lg-3 text-start pb-3 text-muted px-2">
+                Las nuevas tecnologías vienen para quedarse. Pero... ¿Qué es esta tecnología?
+            </p>
+        </div>
+
+        <!-----------------ACCORDION INFO-------------------->
+
+        <div class="accordion py-5 px-4" id="accordionMain">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                        aria-controls="panelsStayOpen-collapseOne">
+                        <strong>¿Qué es una blockchain?</strong>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                    aria-labelledby="panelsStayOpen-headingOne">
+                    <div class="accordion-body">
+                        <p>
+                            Una <strong>blockchain</strong> es un libro contable, que en el caso de Bitcoin, es público.
+                            En él se encuentran todas las transacciones de Bitcoin desde su creación.
+                        </p>
+                        <p>
+                            En simples palabras, es un historial de transacciones, donde se detalla quien envió y quien
+                            recibió BTC. Pero eso no es todo, ya que esta función la puede realizar cualquier sistema
+                            contable hoy en día; lo que hace especial a las blockchains es el proceso de seguridad
+                            criptológico que conllevan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseTwo">
+                        <strong>¿Cómo logran tener tanta seguridad?</strong>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingTwo">
+                    <div class="accordion-body">
+                        <p>
+                            Toda la información que se quiere conservar, en nuestro caso transacciones, se agrupa en
+                            bloques a los que posteriormente se les agrega el Hash anterior y el nuevo.
+                        </p>
+                        <p>
+                            El hash es básicamente un número que se le agrega a cada bloque que cumple con ciertos
+                            requisitos una vez es encriptado. Este número es de extrema importancia y para conseguirlo
+                            la blockchain "contrata" mineros, los cuales mediante poder computacional prueban millones
+                            de valores hasta encontrar el que sirve. Para más información ver <a target="_blank"
+                                href="https://en.wikipedia.org/wiki/Proof_of_work#:~:text=Proof%20of%20work%20(PoW)%20is,minimal%20effort%20on%20their%20part.">PoW</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item pb-5">
+                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseThree">
+                        <strong>Pero... ¿Por qué debería importarme?</strong>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingThree">
+                    <div class="accordion-body">
+                        <p>
+                            En países de mayor estabilidad económica esta pregunta es de enorme relevancia y puede ser
+                            difícil de responder.
+                        </p>
+                        <p>
+                            En cambio, en aquellos que son azotados con mala economía, inestabilidad política, guerra o
+                            incluso golpes de Estado la respuesta se hace fácil de elaborar. Cuando uno tiene Bitcoins
+                            (y cualquier otra crypto) es dueño absoluto de las mismas.
+                        </p>
+                        <p>
+                            Pensalo, ¿Cuántas veces en los últimos años tuviste miedo por tus ahorros en el banco? Y ni
+                            hablar el peligro que corres llevándolos hasta tu casa e incluso una vez abajo del colchón,
+                            el riesgo es enorme. Recomiendo fuertemente que si te interesa el tema veas los <a
+                                href="#videos">videos</a> y <a href="#articulos">artículos</a> que dejamos a tu
+                            disposición!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-----------------ACCORDION INFO FIN --------------->
+
+
+
+
+
+        <div id="videos" class="service-tag py-5 banner-serv">
+            <div class="col-md-12">
+                <ul class="nav d-flex justify-content-center">
+                    <li class="nav-item mx-lg-4">
+                        <a class="filter-btn nav-link btn-outline-info active shadow rounded-pill text-light px-4 
+						light-300" href="#" data-filter=".project">Todo</a>
+                        <!-- btn-outline = boton transparente -->
+                    </li>
+                    <li class="nav-item mx-lg-4">
+                        <a class="filter-btn nav-link btn-outline-info rounded-pill text-light px-4 light-300" href="#"
+                            data-filter=".btc">Bitcoin</a>
+                    </li>
+                    <li class="filter-btn nav-item mx-lg-4">
+                        <a class="filter-btn nav-link btn-outline-info rounded-pill text-light px-4 light-300" href="#"
+                            data-filter=".eth">Ethereum</a>
+                    </li>
+                    <li class="nav-item mx-lg-4">
+                        <a class="filter-btn nav-link btn-outline-info rounded-pill text-light px-4 light-300" href="#"
+                            data-filter=".ing">Ingeniería</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="container overflow-hidden py-5">
+        <div class="row gx-5 gx-sm-3 gx-lg-5 gy-lg-5 gy-3 pb-3 projects">
+
+            <!-- Comienzan los trabajos recientes -->
+            <div class="col-xl-3 col-md-4 col-sm-6 project btc branding">
+                <a href="https://www.youtube.com/watch?v=pOXTAjGmgKE&t" target="_blank"
+                    class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                    <img class="service card-img" src="assets/img/002 - Bitcoin.jpg" alt="Card image">
+                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
+                        <div class="service-work-content text-left text-light">
+                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Introducción a
+                                BTC</span>
+                            <p class="card-text">Este video te enseñará lo básico de Bitcoin</p>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- End Recent Work -->
+
+            <!-- Start Recent Work -->
+            <div class="col-xl-3 col-md-4 col-sm-6 project eth graphic">
+                <a href="https://www.youtube.com/watch?v=CX6IhAReVS0&t" target="_blank"
+                    class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                    <img class="card-img" src="assets/img/0 - ETH.png" alt="Card image">
+                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
+                        <div class="service-work-content text-left text-light">
+                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Introducción a
+                                ETH</span>
+                            <p class="card-text">Este video te enseñará lo básico de Ethereum</p>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- End Recent Work -->
+
+            <!-- Start Recent Work -->
+            <div class="col-xl-3 col-md-4 col-sm-6 project ing branding">
+                <a href="ING.html" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                    <img class="card-img" src="assets/img/0 - Ingenieria.jpg" alt="Card image">
+                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
+                        <div class="service-work-content text-left text-light">
+                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Ingeniería</span>
+                            <p class="card-text">Mi trayectoria y estudios en la Electromecánica</p>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- End Recent Work -->
+
+            <!-- Start Recent Work -->
+            <div class="col-xl-3 col-md-4 col-sm-6 project btc eth graphic">
+                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                    <img class="card-img" src="assets/img/0 - Stock grafico.jpg" alt="Card image">
+                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
+                        <div class="service-work-content text-left text-light">
+                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Gráfica</span>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- End Recent Work -->
+
+            <!-- Start Recent Work -->
+            <div class="col-xl-3 col-md-4 col-sm-6 project graphic">
+                <a href="https://ethereum.org/en/"
+                    class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                    <img class="card-img" src="assets/img/0-hero.jpg" alt="Card image">
+                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
+                        <div class="service-work-content text-left text-light">
+                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Marketing
+                                Digital</span>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- End Recent Work -->
+
+            <!-- Start Recent Work -->
+            <div class="col-xl-3 col-md-4 col-sm-6 project eth branding">
+                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                    <img class="card-img" src="assets/img/0-aave.jpg" alt="Card image">
+                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
+                        <div class="service-work-content text-left text-light">
+                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Branding</span>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- End Recent Work -->
+
+            <!-- Start Recent Work -->
+            <div class="col-xl-3 col-md-4 col-sm-6 project branding">
+                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                    <img class="card-img" src="assets/img/0-MATIC.jpg" alt="Card image">
+                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
+                        <div class="service-work-content text-left text-light">
+                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Negocios</span>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- End Recent Work -->
+
+            <!-- Start Recent Work -->
+            <div class="col-xl-3 col-md-4 col-sm-6 project ui graphic branding">
+                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                    <img class="card-img" src="assets/img/0-Uniswap-V3.jpg" alt="Card image">
+                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
+                        <div class="service-work-content text-left text-light">
+                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Branding</span>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- End Recent Work -->
+
+        </div>
+    </section>
+    <!-- End Service -->
+
+
+
+    <!-- Start View Work -->
+    <section class="banner-trab">
+        <div class="container py-5">
+            <div class="row d-flex justify-content-center text-center">
+                <div class="col-lg-2 col-12 text-dark align-items-center">
+                    <i class="display-1 bx bx-world bx-lg"></i>
+                </div>
+                <div class="col-lg-7 col-12 text-dark pt-2">
+                    <h3 class="h4">Transformá tu forma de ver al mundo</h3>
+                    <p class="h3">Mirá todos nuestros artículos.</p>
+                </div>
+                <div class="col-lg-3 col-12 pt-4">
+                    <a href="#articulos"
+                        class="btn btn-white btn-high-contrast rounded-pill btn-block shadow px-4 py-2">Artículos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End View Work -->
+
+    <!-- Start Recent Work -->
+    <section id="articulos" class="py-5 mb-5">
+        <div class="container">
+            <div class="recent-work-header row text-center pb-5">
+                <h2 class="col-md-6 m-auto h2 semi-bold-600 py-5">Nuestros Artículos</h2>
+            </div>
+            <div class="row gy-5 g-lg-5 mb-4">
+
+                <!-- Start Recent Work -->
+                <div class="col-md-4 mb-3">
+                    <a target="_blank"
+                        href="https://celsiushub.com/article/bitcoin-001-conceptos-b%C3%A1sicos---%C2%A1introducci%C3%B3n-para-novatos-1611498727033x995185980890415100"
+                        class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="assets/img/002 - Bitcoin.jpg" alt="Card image">
+                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                            <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                                <h3 class="card-title light-400">Bitcoin</h3>
+                                <p class="card-text">Transcripción de nuestro video introductorio sobre Bitcoin</p>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- End Recent Work -->
+
+                <!-- Start Recent Work -->
+                <div class="col-md-4 mb-3">
+                    <a target="_blank"
+                        href="https://celsiushub.com/article/ethereum-001-conceptos-b%C3%A1sicos---%C2%A1introducci%C3%B3n-para-novatos-1611670842097x980216112255074300"
+                        class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="assets/img/0-hero.jpg" alt="Card image">
+                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                            <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                                <h3 class="card-title light-400">Ethereum</h3>
+                                <p class="card-text">Transcripción de nuestro video introductorio sobre Ethereum</p>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- End Recent Work -->
+
+                <!-- Start Recent Work -->
+                <div class="col-md-4 mb-3">
+                    <a target="_blank"
+                        href="https://celsiushub.com/article/%C2%BFc%C3%B3mo-escapar-al-peso-argentina-2020-2021--1607537472121x402925820984164350"
+                        class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="./assets/img/recent-work-03.jpg" alt="Card image">
+                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                            <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                                <h3 class="card-title light-400">Escapar a la inflación</h3>
+                                <p class="card-text">Para quienes buscan ahorrar o
+                                    entrar al mundo crypto</p>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- End Recent Work -->
+
+                <!-- Start Recent Work -->
+                <div class="col-md-4 mb-3">
+                    <a target="_blank"
+                        href="https://celsiushub.com/article/el-dilema-del-prisionero-explicado-con-el-token-cel-1610119608020x118294467473571840"
+                        class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="assets/img/0 - chess arg.jpg" alt="Card image">
+                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                            <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                                <h3 class="card-title light-400">Estudios de Mercado</h3>
+                                <p class="card-text">Dilema del prisionero</p>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- End Recent Work -->
+
+                <!-- Start Recent Work -->
+                <div class="col-md-4 mb-3">
+                    <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="assets/img/0 - Logo CriptoNews.png" alt="Card image">
+                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                            <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                                <h3 class="card-title light-400">Desarrollo de Marca</h3>
+                                <p class="card-text">Nacimiento de CryptoNews</p>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- End Recent Work -->
+
+                <!-- Start Recent Work -->
+                <div class="col-md-4 mb-3">
+                    <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="assets/img/Banner-003.png" alt="Card image">
+                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                            <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                                <h3 class="card-title light-400">Diseño Creativo</h3>
+                                <p class="card-text">Originales.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- End Recent Work -->
+
+            </div>
+        </div>
+    </section>
+    <!-- End Recent Work -->
+
+
+
+    <!-- Start Footer -->
+    <footer class="bg-fst-footer pt-4">
+        <div class="container">
+            <div class="row py-4">
+
+                <div class="col-lg-3 col-12 align-left">
+                    <a class="navbar-brand" href="index.html">
+                        <i class="bx bxl-bitcoin bx-sm text-white"></i>
+                        <span class="text-light h5">Crypto</span><span class="text-light h5 semi-bold-600">News</span>
+                    </a>
+                    <p class="text-light my-lg-4 my-2">
+                        Do good and do well.
+                    <p class="text-light"><em>Hagamos el bien y estemos bien.</em></p>
+                    </p>
+                    <ul class="list-inline footer-icons light-300">
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="http://facebook.com/">
+                                <i class="bx bxl-facebook-square bx-md"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="https://www.linkedin.com/in/ignacio-jakin/">
+                                <i class="bx bxl-linkedin-square bx-md"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="https://www.whatsapp.com/">
+                                <i class="bx bxl-whatsapp-square bx-md"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="https://www.flickr.com/">
+                                <i class="bx bxl-flickr-square bx-md"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="https://www.medium.com/">
+                                <i class="bx bxl-medium-square bx-md"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+                    <h3 class="h4 pb-lg-3 text-light light-300">Nuestro Conocimiento</h2>
+                        <ul class="list-unstyled text-light light-300">
+                            <li class="pb-2">
+                                <i class="bx-fw bx bxs-chevrons-right bx-xs"></i><a
+                                    class="text-decoration-none text-light" href="index.html">Home</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class="bx-fw bx bxs-chevrons-right bx-xs"></i><a
+                                    class="text-decoration-none text-light py-1" href="BTC.html">Bitcoin</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class="bx-fw bx bxs-chevrons-right bx-xs"></i><a
+                                    class="text-decoration-none text-light py-1" href="ETH.html">Ethereum</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class="bx-fw bx bxs-chevrons-right bx-xs"></i></i><a
+                                    class="text-decoration-none text-light py-1" href="ING.html">Ingeniería</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class="bx-fw bx bxs-chevrons-right bx-xs"></i><a
+                                    class="text-decoration-none text-light py-1" href="contact.html">Contáctanos</a>
+                            </li>
+                        </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+                    <h2 class="h4 pb-lg-3 text-light light-300">Trabajos</h2>
+                    <ul class="list-unstyled text-light light-300">
+                        <li class="pb-2">
+                            <i class="bx-fw bx bxs-chevrons-right bx-xs"></i><a
+                                class="text-decoration-none text-light py-1" target="_blank"
+                                href="https://celsiushub.com/creators/nacho-jakin-1607515561297x986507959656850000">Artículos</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class="bx-fw bx bxs-chevrons-right bx-xs"></i><a
+                                class="text-decoration-none text-light py-1" target="_blank"
+                                href="https://www.youtube.com/channel/UC8Mo1ocX5jqNoORsxXdVBTA/videos">Videos</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class="bx-fw bx bxs-chevrons-right bx-xs"></i><a
+                                class="text-decoration-none text-light py-1" href="#">Marketing</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class="bx-fw bx bxs-chevrons-right bx-xs"></i><a
+                                class="text-decoration-none text-light py-1" target="_blank"
+                                href="https://twitter.com/CryptoNewsArg">Redes Sociales</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class="bx-fw bx bxs-chevrons-right bx-xs"></i><a
+                                class="text-decoration-none text-light py-1" href="#">Soluciones Digitales</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class="bx-fw bx bxs-chevrons-right bx-xs"></i><a
+                                class="text-decoration-none text-light py-1" href="#">Gráfica</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+                    <h2 class="h4 pb-lg-3 text-light light-300">Atendemos en:</h2>
+                    <ul class="list-unstyled text-light light-300">
+                        <li class="pb-2">
+                            <i class="bx-fw bx bx-home-alt bx-xs"></i><a class="text-decoration-none text-light py-1"
+                                target="_blank" href="https://es.wikipedia.org/wiki/742_Evergreen_Terrace">Avenida
+                                Siempreviva 742</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class="bx-fw bx bx-mail-send bx-xs"></i><a class="text-decoration-none text-light py-1"
+                                href="mailto:nachojakin@gmail.com">nachojakin@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="w-100 bg-snd-footer py-3">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-lg-6 col-sm-12">
+                        <p class="text-lg-start text-center text-light light-300">
+                            © Copyright 2021 CryptoNews. Todos los derechos reservados.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <p class="text-lg-end text-center text-light light-300">
+                            Diseñado por <a rel="sponsored" class="text-decoration-none text-light"
+                                href="https://cursophp.com.ar/" target="_blank"><strong>Nacho J.</strong></a>
+                        </p>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <p>
+                            <a class="text-lg-start text-center text-light light-300" href="
+                                http://www.freepik.com">Vectors designed by vector_corp / Freepik</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
+
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Load jQuery require for isotope -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Isotope -->
+    <script src="assets/js/isotope.pkgd.js"></script>
+    <!-- Page Script -->
+    <script>
+        $(window).load(function () {
+            // init Isotope
+            var $projects = $(".projects").isotope({
+                itemSelector: ".project",
+                layoutMode: "fitRows"
+            });
+            $(".filter-btn").click(function () {
+                var data_filter = $(this).attr("data-filter");
+                $projects.isotope({
+                    filter: data_filter
+                });
+                $(".filter-btn").removeClass("active");
+                $(".filter-btn").removeClass("shadow");
+                $(this).addClass("active");
+                $(this).addClass("shadow");
+                return false;
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

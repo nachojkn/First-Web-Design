@@ -1,0 +1,302 @@
+/*
+---------------------------------------------
+Índice
+------------------------------------------------
+1. Typography
+2. Main Nav
+3. Home
+4. About
+5. Work
+6. Single Work
+7. Pricing
+8. Contact
+--------------------------------------------- */
+
+html {font-family: 'Fira Sans', sans-serif;}
+/* Typography */
+p, a {font-weight: 400;}
+.h2 {font-size: 40px;}
+.h3 {font-size: 28px;}
+.h4 {font-size: 20px;}
+.light-300 {
+  font-family: 'Fira Sans', sans-serif !important;
+  font-weight: 300;
+}
+.regular-400 {
+  font-family: 'Fira Sans', sans-serif !important;
+  font-weight: 400;
+}
+.semi-bold-600 {
+  font-family: 'Fira Sans', sans-serif !important;
+  font-weight: 600;
+}
+
+.typo-space-line::after,
+.typo-space-line-center::after {
+  content: "";
+  width: 250px;
+  display:block;
+  position: absolute;
+  border-bottom:  2px solid rgba(255, 255, 255, 0.8);
+  padding-top: .5em;
+}
+.typo-space-line-center::after {
+  left: 50%;
+  margin-left: -75px;
+}
+/* Main Nav */
+#main_nav .nav-item .nav-link:hover {color: rgba(255, 255, 255, 0.938);}
+
+#main_nav {
+  /**background-image: url("../img/0-\ bg-navbar.jpg");**/
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0,0, 0, 1) 20%, rgba(0,0,0, 1) 35%, rgb(0, 0, 0) 99.99%);
+  width: 100%;
+  position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+#Logo {
+  max-height: 2em;
+}
+
+/* EN CONSTRUCCIÓN */
+#unfinished {
+  background-image: url("../img/const-\ Under\ construction.gif");
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  height: 100%;
+  min-height: 50vh;
+  max-width: 500px;
+}
+
+
+/* Home */
+#index_banner {
+  background-image: url("../img/0-\ bg-world.jpg");
+  background-position: center center; background-size: cover;
+  height: 100%;
+  min-height: 60vh;
+  width: 100%;
+  z-index: 11;
+}
+
+#index_banner .carousel-item {
+  min-height: 60vh;
+}
+#index_banner .carousel-control-prev i,
+#index_banner .carousel-control-next i {
+  color: rgb(0, 238, 255) !important;
+  text-decoration: none;
+  font-size: 4em;
+  top: 10;
+  z-index: 10;
+}
+#index_banner .carousel-inner {
+  height: 80vh;
+}
+#index_banner .carousel-indicators li,
+#index_banner .carousel-indicators.active {
+  background-color: rgb(0, 238, 255) !important;
+  // las rayas de abajo del carrousel van de color azul
+}
+
+#accordionMain {
+  top: 20;
+  z-index: 20;
+}
+
+.text-p1 {
+  color: rgb(255, 255, 255,0.85);;
+}
+
+.text-p2 {
+  color: rgba(255, 255, 255, 0.945);;
+}
+
+.service-wrapper .service-footer {
+  max-width: 720px;
+}
+
+
+
+.banner-serv {
+  background-image: url("../img/0-\ banner-servicios.jpg");
+  background-position: center center; background-size: cover;
+}
+
+
+.service-work.card {
+  border-radius: 10px !important;
+  cursor: pointer;
+}
+.service-work .service-work-vertical {
+	background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0.1) 33.33%, rgba(255,60,250,0.8) 66.66%, rgb(79, 218, 236,0.75) 99.99%);
+  background-size: 300% 300%;
+  background-position: 0% 100%;
+  transition: .5s;
+}
+.service-work .service-work-vertical:hover {
+  background-position: 0% 0%;
+  transition: .5s;
+}
+.service-work .service-work-vertical:hover * {
+  color: rgb(255, 255, 255);
+  border-color: rgb(255, 255, 255);
+  transition: .5s;
+}
+
+.service-work:hover div.service-work-content {
+  top: 50%;
+  margin-top: -2.5em;
+  position: absolute;
+}
+
+.banner-trab {
+  background-image: url("../img/0- banner-trabajos.jpg");
+  background-position: center center; 
+  background-size: cover;
+}
+
+.btn-high-contrast {
+  border-color: rgba(0, 0, 0, 0);
+  background-color: #89C4FC;
+}
+
+.banner-button {
+  background-color: rgba(10, 10, 10, 0.5);
+}
+
+.recent-work.card{
+  border-radius: 10px !important;
+}
+.recent-work .recent-work-vertical {
+	background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(255,255,255,0.8) 0%, rgba(255, 0, 221, 0) 33.333%, rgb(102, 196, 252) 66.666%, rgba(255, 0, 255, 0.5) 99.999%);
+  background-size: 300% 300%;
+  background-position: 0% 100%;
+  transition: .5s;
+  cursor: pointer;
+}
+.recent-work .recent-work-vertical:hover {
+  background-position: 0% 0%;
+  transition: .5s;
+}
+.recent-work .recent-work-vertical:hover div.recent-work-content {
+  top: 50%;
+  margin-top: -2.5em;
+  position: absolute;
+}
+.recent-work .recent-work-vertical:hover * {
+  color: white;
+  transition: .5s;
+}
+
+/* ------------------- BITCOIN ------------------- */
+
+.bg-btc {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3)70%,rgba(0, 0, 0, 0.1) 99.99%), url("../img/btc-\ fst\ background.jpg");
+  background-position: center center; background-size: cover;
+  min-height: 70vh;
+  height: 820px;
+  margin-top: 3%;
+  width: 100%;
+}
+
+.btc-satoshi {
+  text-decoration: none;
+}
+
+.quien {
+  width: 100%;
+  margin: auto;
+}
+
+.satoshi-text{
+  width: 50%;
+}
+
+.team-member-img {
+  width: 50%;
+  min-height: 40vh;
+  min-width: 40vh;
+}
+
+
+/* About */
+#work_banner {
+  background-image: url('./../img/banner-bg-02.jpg');
+  background-position: center center; background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.progress {
+  height: 8px;
+}
+.objective-icon {
+  border-radius: 13px;
+  width: 8rem;
+}
+.partner-wap {
+  background-color: #7276ec;
+  transition: 1s;
+  cursor: pointer;
+}
+.partner-wap:hover {
+  background-color: #b1b3f5;
+}
+.why-us {
+  background: rgb(239,239,253);
+  background: -moz-linear-gradient(0deg, rgba(239,239,253,1) 50%, rgba(255,255,255,1) 50%);
+  background: -webkit-linear-gradient(0deg, rgba(239,239,253,1) 50%, rgba(255,255,255,1) 50%);
+  background: linear-gradient(0deg, rgba(239,239,253,1) 50%, rgba(255,255,255,1) 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#efeffd",endColorstr="#ffffff",GradientType=1);
+}
+
+
+/* Work */
+/* Singel Work */
+#work_single_banner {
+  background-image: url('./../img/banner-bg-02.jpg');
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.related-content {
+  border-radius: 20px;
+  cursor: pointer;
+}
+/* Pricing */
+.pricing-list {
+  margin-bottom: 1px;
+}
+.pricing-table {
+  max-width: 350px;
+  margin: auto;
+}
+.pricing-table,
+.pricing-horizontal {
+  border-radius: 15px !important;
+}
+/* Contact */
+#floatingtextarea {
+  height: 150px
+}
+/* Footer */
+
+.bg-fst-footer {
+  background: linear-gradient(to bottom, #56baef 0%,#47b0ed 34%,#239eef 66%,#0b74dd 100%);
+}
+
+.bg-snd-footer{
+  background-color: #0b74dd;
+}
+
+footer a.text-light:hover {
+  color: #bfbfbf !important;
+  transition-duration: 0.15s;
+}
